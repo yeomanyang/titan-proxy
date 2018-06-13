@@ -9,10 +9,10 @@ Mock weighing server for test.
 ## Package executable file
 
 `npm run package`
-`cd weighing-server/weighing-server-win32-x64/resources/app`
+`cd titan-proxy/titan-proxy-win32-x64/resources/app`
 `npm install`
 
 ## Package installation file
 
-`cd weighing-server`
+`cd titan-proxy`
 `grunt`
