@@ -1,0 +1,38 @@
+{
+  "name": "wms-proxy",
+  "version": "1.0.0",
+  "description": "Proxy printer and video for Titan.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-packager ./ titan-proxy --icon=public/images/logo --out titan-proxy --arch=x64 --version 1.8.1 --overwrite --ignore=node_modules --version-string.CompanyName=yeoman --version-string.ProductName=titan-proxy"
+  },
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "dependencies": {
+    "@koa/cors": "^2.2.1",
+    "debug": "^2.6.3",
+    "http-proxy": "^1.17.0",
+    "koa": "^2.2.0",
+    "koa-bodyparser": "^3.2.0",
+    "koa-convert": "^1.2.0",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^2.0.1",
+    "koa-onerror": "^1.2.1",
+    "koa-router": "^7.1.1",
+    "koa-static": "^3.0.0",
+    "koa-views": "^5.2.1",
+    "pug": "^2.0.0-rc.1",
+    "xtemplate": "^4.6.1",
+    "xtpl": "^3.4.0"
+  },
+  "devDependencies": {
+    "electron": "~1.7.8",
+    "electron-packager": "^10.1.1"
+  }
+}

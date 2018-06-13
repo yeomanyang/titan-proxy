@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Titan-Proxy</title>
+  </head>
+  <body>
+    <div class="titan-main">
+        <form action="">
+            <div class="titan-form-item">
+                <label class="titan-form-item__label">视频服务地址：</label>
+                <input id="ip_input" class="titan-form-item__input" type="text">
+            </div>
+            <div class="titan-form-item">
+                <label class="titan-form-item__label">视频服务端口：</label>
+                <input id="port_input" class="titan-form-item__input" type="text">
+            </div>
+        </form>
+        <button id="save_btn" class="titan-btn titan-btn--blue">保存配置</button>
+        <button id="test_btn" class="titan-btn titan-btn--green">测试视频服务</button>
+        <button id="proxy_btn" class="titan-btn titan-btn--green">重启代理</button>
+    </div>
+    <script>
+      // You can also require other files to run in this process
+      require('./renderer.js')
+    </script>
+  </body>
+</html>
+
+<style>
+    html, body {
+        height: 100%;
+        width: 100%;
+    }
+    .titan-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+    .titan-form-item {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .titan-form-item__label {
+        flex-grow: 1;
+    }
+    .titan-form-item__input {
+        -webkit-appearance: none;
+        background-color: #fff;
+        background-image: none;
+        border-radius: 4px;
+        border: 1px solid #dcdfe6;
+        box-sizing: border-box;
+        color: #606266;
+        display: inline-block;
+        font-size: inherit;
+        height: 40px;
+        line-height: 40px;
+        outline: none;
+        padding: 0 15px;
+        transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+        /* width: 100%; */
+    }
+    .titan-btn {
+        display: inline-block;
+        line-height: 1;
+        white-space: nowrap;
+        cursor: pointer;
+        background: #fff;
+        border: 1px solid #dcdfe6;
+        border-color: #dcdfe6;
+        color: #606266;
+        -webkit-appearance: none;
+        text-align: center;
+        box-sizing: border-box;
+        outline: none;
+        margin: 0;
+        transition: .1s;
+        font-weight: 500;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        padding: 12px 20px;
+        font-size: 14px;
+        border-radius: 4px;
+        margin-top: 30px;
+    }
+    .titan-btn--green {
+        color: #fff;
+        background-color: #67c23a;
+        border-color: #67c23a;
+    }
+    .titan-btn--blue {
+        color: #fff;
+        background-color: #409eff;
+        border-color: #409eff;
+    }
+</style>

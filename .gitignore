@@ -1,0 +1,4 @@
+node_modules
+weighing-server/weighing-server-darwin-x64
+weighing-server/weighing-server-win32-x64
+.vscode
