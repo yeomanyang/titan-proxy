@@ -1,4 +1,4 @@
-# wms-proxy
+# titan-proxy
 
 Mock weighing server for test.
 

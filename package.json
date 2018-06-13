@@ -1,5 +1,5 @@
 {
-  "name": "wms-proxy",
+  "name": "titan-proxy",
   "version": "1.0.0",
   "description": "Proxy printer and video for Titan.",
   "main": "main.js",

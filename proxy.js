@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 const httpProxy = require('http-proxy');
 const ipcMain = require('electron').ipcMain;
 
@@ -11,8 +12,8 @@ ipcMain.on('proxy', function(event, { printerAddress, videoAddress }) {
     // 代理 lodop
     lodopProxy = httpProxy.createServer({
         ssl: {
-            key: fs.readFileSync('./cert/titan.key', 'utf8'),
-            cert: fs.readFileSync('./cert/titan.crt', 'utf8')
+            key: fs.readFileSync(path.join(__dirname, "cert/titan.key"), 'utf8'),
+            cert: fs.readFileSync(path.join(__dirname, "cert/titan.crt"), 'utf8')
         },
         target: `http://${printerAddress}`,
         secure: false
@@ -29,8 +30,8 @@ ipcMain.on('proxy', function(event, { printerAddress, videoAddress }) {
     // 代理 视频服务
     videoProxy = httpProxy.createServer({
         ssl: {
-            key: fs.readFileSync('./cert/titan.key', 'utf8'),
-            cert: fs.readFileSync('./cert/titan.crt', 'utf8')
+            key: fs.readFileSync(path.join(__dirname, "cert/titan.key"), 'utf8'),
+            cert: fs.readFileSync(path.join(__dirname, "cert/titan.crt"), 'utf8')
         },
         target: `http://${videoAddress}`,
         secure: false
