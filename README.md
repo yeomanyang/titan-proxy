@@ -1,6 +1,6 @@
 # titan-proxy
 
-Mock weighing server for test.
+Proxy printer and video for Titan..
 
 ## Development
 
